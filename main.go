@@ -26,6 +26,9 @@ func main() {
 		panic(err)
 	}
 
+	// Print server status
+	fmt.Printf("Server is listening at port %s\n", port)
+
 	// Ensure the listener is closed when the function exits
 	// This prevents resource leaks and frees up the port
 	defer l.Close()
